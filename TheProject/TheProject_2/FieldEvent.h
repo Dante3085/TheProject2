@@ -1,6 +1,8 @@
 #pragma once
 #include <SFML/Graphics/Rect.hpp>
 #include "AnimatedSprite.h"
+#include <iostream>
+
 namespace TheProject
 {
 	class FieldEvent
@@ -12,6 +14,7 @@ namespace TheProject
 		void check(sf::FloatRect other);
 		inline void reset()
 		{
+			std::cout << "Event resettet" << std::endl;
 			m_triggered = false;
 		}
 		const sf::FloatRect getBounds() const { return m_bounds; }

@@ -11,6 +11,7 @@ AnimatedSprite* sprite;
 
 void saySomething()
 {
+	std::cout << "Event ausgelöst!" << std::endl;
 	sprite->move(50, 0);
 }
 
@@ -67,13 +68,13 @@ int main()
 
 		// AnimatedSprite smooth bewegen (Beachte: https://www.sfml-dev.org/tutorials/2.5/window-events.php; https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Keyboard.php)
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-			sprite->move(-.5f, 0);
+			sprite->move(-.8f, 0);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-			sprite->move(.5f, 0);
+			sprite->move(.8f, 0);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-			sprite->move(0, -.5f);
+			sprite->move(0, -.8f);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-			sprite->move(0, .5f);
+			sprite->move(0, .8f);
 	
 
 		// NACHVOLLZIEHEN
