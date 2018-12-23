@@ -4,6 +4,9 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+#include "GameObject.h"
+#include "Event.h"
+
 namespace TheProject
 {
 	enum EAnimation
@@ -36,7 +39,7 @@ namespace TheProject
 	 * \brief Uses the frames of a SpriteSheet to create a Sprite with Animation
 	 * \author mjsch
 	 */
-	class AnimatedSprite : public sf::Drawable
+	class AnimatedSprite : public sf::Drawable, public GameObject
 	{
 	public:
 		AnimatedSprite(const std::vector<std::string> spriteSheetLocations, const sf::Vector2f& pos, float speed = 200.f);

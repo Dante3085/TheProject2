@@ -3,7 +3,6 @@
 #include <iostream>
 
 #include "AnimatedSprite.h"
-#include "FieldEvent.h"
 #include "Event.h"
 
 using namespace TheProject;
@@ -20,7 +19,7 @@ int main()
 
 	std::cout << "xSpeed: " << xSpeed << ", ySpeed: " << ySpeed << std::endl;
 
-	AnimatedSprite sprite {{"demon-idle.png"}, {0, 0} };
+	AnimatedSprite sprite {{"demon-idle.png"}, {0, 0}, };
 	sprite.addAnimation(IDLE, 0, 160, 144, 0, 0, 6, 0.2f);
 	sprite.setAnimation(IDLE);
 
@@ -104,14 +103,16 @@ int main()
 		}
 
 		spriteBox.setPosition(sprite.getBounds().left, sprite.getBounds().top);
-
 		myEvent.check();
 
 		window.clear();
+
 		sprite.update(deltaTime);
+
 		window.draw(recShape);
 		window.draw(sprite);
 		window.draw(spriteBox);
+
 		window.display();
 
 	}

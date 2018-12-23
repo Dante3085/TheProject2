@@ -21,10 +21,13 @@
     <ClCompile Include="AnimatedSprite.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="FieldEvent.cpp">
+    <ClCompile Include="Event.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Event.cpp">
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="FiniteStateMachine.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
@@ -37,10 +40,19 @@
     <ClInclude Include="AnimatedSprite.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="FieldEvent.h">
+    <ClInclude Include="Event.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Event.h">
+    <ClInclude Include="GameObject.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="FiniteStateMachine.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
