@@ -24,6 +24,9 @@
     <ClCompile Include="FieldEvent.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Font Include="calibri.ttf">
@@ -35,6 +38,9 @@
       <Filter>Headerdateien</Filter>
     </ClInclude>
     <ClInclude Include="FieldEvent.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>

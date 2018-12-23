@@ -81,6 +81,8 @@ namespace TheProject
 		 */
 		inline void setPosition(const sf::Vector2f& position);
 
+		inline void setPosition(float x, float y);
+
 		/**
 		 * \brief Returns this AnimatedSprite's position.
 		 * \return This AnimatedSprite's position
@@ -182,6 +184,12 @@ namespace TheProject
 	inline void AnimatedSprite::setPosition(const sf::Vector2f& position)
 	{
 		m_pos = position;
+	}
+
+	inline void AnimatedSprite::setPosition(float x, float y)
+	{
+		m_pos.x = x;
+		m_pos.y = y;
 	}
 
 	inline void AnimatedSprite::move(float x, float y)
