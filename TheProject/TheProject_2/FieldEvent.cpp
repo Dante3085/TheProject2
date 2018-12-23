@@ -2,8 +2,8 @@
 
 namespace TheProject
 {
-	FieldEvent::FieldEvent(sf::FloatRect bounds, void(*content)())
-		: m_bounds{ bounds }, m_content{ content }, m_triggered{ false }
+	FieldEvent::FieldEvent(sf::FloatRect bounds, void(*content)(), std::string name)
+		: m_bounds{ bounds }, m_content{ content }, m_triggered{ false }, m_name{ name }
 	{
 	}
 
@@ -17,6 +17,7 @@ namespace TheProject
 		{
 			m_content();
 			m_triggered = true;
+			std::cout << "FieldEvent '" << m_name << "' triggered." << std::endl;
 		}
 	}
 }

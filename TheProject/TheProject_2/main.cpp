@@ -11,13 +11,18 @@ AnimatedSprite* sprite;
 
 void saySomething()
 {
-	std::cout << "Event ausgelöst!" << std::endl;
 	sprite->move(50, 0);
 }
 
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(1920, 1080), "TheProject2");
+	sf::RenderWindow window(sf::VideoMode(1280, 720), "TheProject2");
+
+	float xSpeed, ySpeed;
+	xSpeed = window.getSize().x * 0.0001f;
+	ySpeed = window.getSize().y * 0.0001f;
+
+	std::cout << "xSpeed: " << xSpeed << ", ySpeed: " << ySpeed << std::endl;
 
 	sprite = new AnimatedSprite{{"demon-idle.png"}, {0, 0} };
 	sprite->addAnimation(IDLE, 0, 160, 144, 0, 0, 6, 0.2f);
@@ -68,13 +73,13 @@ int main()
 
 		// AnimatedSprite smooth bewegen (Beachte: https://www.sfml-dev.org/tutorials/2.5/window-events.php; https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Keyboard.php)
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-			sprite->move(-.8f, 0);
+			sprite->move(-xSpeed, 0);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-			sprite->move(.8f, 0);
+			sprite->move(xSpeed, 0);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
-			sprite->move(0, -.8f);
+			sprite->move(0, -ySpeed);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-			sprite->move(0, .8f);
+			sprite->move(0, ySpeed);
 	
 
 		// NACHVOLLZIEHEN
